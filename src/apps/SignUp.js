@@ -1,27 +1,45 @@
-import React, { useState }  from 'react'
+import React, { useContext, useState }  from 'react'
 import { Form, Card, Button } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { UserContext } from './context/Authentication';
+import { useNavigate, Link } from "react-router-dom";
 
-function SignUp() {
-    const [username, setUserName] = useState("")
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
+const SignUp = () => {
+    const {setUser} = useContext(UserContext);
+    
+    const [userProperties, setUserProperties] = useState({
+         username: "",
+         email: "",
+         password: ""
+       
+    });
+    const navigate = useNavigate()
 
-
-  async function register(e) {
-      let item ={username, email, password}
-      e.preventDefault()
-
-        let result = await fetch("http://localhost:9292/users", {
-        method: 'POST',
-        body: JSON.stringify(item),
-        headers: {
-            "content-type": "application/json",
-            "Accept": "application/json",
-        }
-    })
-     console.log(result.json())
+    const handleChange = (e) => {
+        setUserProperties({
+            ...userProperties,
+            [e.target.name]: e.target.value
+        })
     }
+    const handleSubmit = e => {
+        e.preventDefault()
+    
+    fetch("http://localhost:9292/users", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userProperties)
+    })
+    .then(resp => {
+        if (resp.status === 200) {
+        resp.json()
+        .then((data) => {
+            setUser(data)
+            navigate("/home")
+        })
+    }
+    })
+}
 
 
   return (
@@ -31,18 +49,18 @@ function SignUp() {
               <h2 id='logo'>Instajunk</h2>
               <br />
               <h5 className='text-center mb-4'>Sign Up to see photos and videos from your friends</h5>
-              <Form onSubmit={register}>
+              <Form onSubmit={handleSubmit}>
                   <Form.Group id="username">
                       <Form.Label>username</Form.Label>
-                      <Form.Control type="text" value={username} onChange={(e)=>setUserName(e.target.value)} required/>
+                      <Form.Control name='username' type="text" value={userProperties.username} onChange={handleChange} required/>
                   </Form.Group>
                   <Form.Group id="email">
                       <Form.Label>Email</Form.Label>
-                      <Form.Control type="email" value={email} onChange={(e)=>setEmail(e.target.value)} required/>
+                      <Form.Control name="email" type="email" value={userProperties.email} onChange={handleChange} required/>
                   </Form.Group>
                   <Form.Group id="password">
                       <Form.Label>password</Form.Label>
-                      <Form.Control type="password" value={password} onChange={(e)=>setPassword(e.target.value)} required/>
+                      <Form.Control name='password' type="password" value={userProperties.password} onChange={handleChange} required/>
                   </Form.Group>
                   <br />
                   <Button className='w-100' type="submit">Sign Up</Button>
