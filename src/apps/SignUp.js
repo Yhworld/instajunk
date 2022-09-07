@@ -1,5 +1,6 @@
 import React, { useState }  from 'react'
 import { Form, Card, Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 function SignUp() {
     const [username, setUserName] = useState("")
@@ -9,7 +10,7 @@ function SignUp() {
 
   async function register(e) {
       let item ={username, email, password}
-
+      e.preventDefault()
 
         let result = await fetch("http://localhost:9292/users", {
         method: 'POST',
@@ -19,8 +20,7 @@ function SignUp() {
             "Accept": "application/json",
         }
     })
-     result =await result.json()
-     console.warn("result",result)
+     console.log(result.json())
     }
 
 
@@ -50,7 +50,7 @@ function SignUp() {
           </Card.Body>
       </Card>
       <div className="w-100 text-center mt-2">
-          Already have an account? Log in
+          Already have an account? <Link to="/login">Log in</Link>
       </div>
       </>
   )
