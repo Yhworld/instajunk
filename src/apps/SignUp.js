@@ -1,5 +1,5 @@
 import React, { useContext, useState }  from 'react'
-import { Form, Card, Button } from 'react-bootstrap'
+import { Form, Card, Button, Container } from 'react-bootstrap'
 import { UserContext } from './context/Authentication';
 import { useNavigate, Link } from "react-router-dom";
 
@@ -35,7 +35,7 @@ const SignUp = () => {
         resp.json()
         .then((data) => {
             setUser(data)
-            navigate("/home")
+            navigate("/")
         })
     }
     })
@@ -44,6 +44,8 @@ const SignUp = () => {
 
   return (
       <>
+    <Container className="d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}>
+      <div className='w-100' style={{ maxWidth: "370px" }}>
       <Card>
           <Card.Body>
               <h2 id='logo'>Instajunk</h2>
@@ -70,6 +72,8 @@ const SignUp = () => {
       <div className="w-100 text-center mt-2">
           Already have an account? <Link to="/login">Log in</Link>
       </div>
+      </div>
+      </Container>
       </>
   )
 }
