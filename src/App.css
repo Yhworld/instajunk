@@ -120,7 +120,7 @@ div#usernamey {
   background-color: transparent;
 }
 
-a {
+.nav a {
   color: inherit;
   font-size: 28px;
   display: flex;
