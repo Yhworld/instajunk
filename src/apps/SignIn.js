@@ -34,7 +34,7 @@ function SignIn() {
         resp.json()
         .then((data) => {
             setUser(data.user)
-            navigate("/")
+            navigate("/home")
         })
     }else {
         resp.json()

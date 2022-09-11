@@ -38,7 +38,7 @@ function AddPost() {
             },
             body: JSON.stringify(newPost)
         })
-        .then(() => navigate("/"))
+        .then(() => navigate("/home"))
         
     }
   return (

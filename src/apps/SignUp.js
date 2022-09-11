@@ -35,7 +35,7 @@ const SignUp = () => {
         resp.json()
         .then((data) => {
             setUser(data)
-            navigate("/")
+            navigate("/home")
         })
     }
     })
