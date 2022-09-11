@@ -17,6 +17,7 @@ function Homepage() {
               const data = await resp.json()
           
               setpost(data)
+              console.log(data)
               setLoading(false)
           } catch (error) {
               alert(error)
@@ -40,7 +41,7 @@ function Homepage() {
       <ul className='nav'>
         <li><BsFillHouseDoorFill/></li>
         <NavLink to={"/addpost"}><CgAddR/></NavLink>
-        <li><ImCompass/></li>
+        <NavLink to={"/search"}><ImCompass/></NavLink>
         <li><FaRegUserCircle /></li>
       </ul>
       </section>
