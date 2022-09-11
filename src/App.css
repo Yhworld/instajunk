@@ -119,3 +119,12 @@ div#usernamey {
   font-size: 28px;
   background-color: transparent;
 }
+
+a {
+  color: inherit;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  padding-left: 23px;
+  padding-right: 22px;
+}
