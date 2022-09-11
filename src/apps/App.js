@@ -44,9 +44,9 @@ function App() {
       <UserProvider>
         <Router>
         <Routes>
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="/" element={<SignUp />} />
         <Route path="/login" element={<SignIn />} />
-        <Route exact path="/" element={<Homepage />} />
+        <Route exact path="/home" element={<Homepage />} />
         <Route exact path="/addpost" element={<AddPost />} />
         <Route exact path="/search" element={<SearchUsers handleSubmit={handleSubmit} handleUpdateUser={handleUpdateUser} handleDeleteUser={handleDeleteUser} handleChange={setChange} change={change} displayedProfiles={displayedProfiles} />} />
         </Routes>
