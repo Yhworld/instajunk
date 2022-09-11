@@ -15,4 +15,19 @@ li {
   padding: 20px;
 }
 
+.post-card img {
+  width: 469px;
+  border-radius: 20px;
+}
 
+.post-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-container {
+  display: flex;
+  margin-top: 60px;
+  flex-direction: column;
+  align-items: center;
+}
