@@ -9,7 +9,7 @@ const SignUp = () => {
     const [userProperties, setUserProperties] = useState({
          username: "",
          email: "",
-         password: ""
+         password_digest: ""
        
     });
     const navigate = useNavigate()
@@ -23,7 +23,7 @@ const SignUp = () => {
     const handleSubmit = e => {
         e.preventDefault()
     
-    fetch("http://localhost:9292/users", {
+       fetch("https://instajunk.herokuapp.com/users", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -62,7 +62,7 @@ const SignUp = () => {
                   </Form.Group>
                   <Form.Group id="password">
                       <Form.Label>password</Form.Label>
-                      <Form.Control name='password' type="password" value={userProperties.password} onChange={handleChange} required/>
+                      <Form.Control name='password_digest' type="password" value={userProperties.password_digest} onChange={handleChange} required/>
                   </Form.Group>
                   <br />
                   <Button className='w-100' type="submit">Sign Up</Button>

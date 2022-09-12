@@ -8,7 +8,7 @@ function SearchUsers({ handleSubmit, handleChange, change, displayedProfiles, ha
       <>
       <Form id='searchform' onSubmit={handleSubmit}>
           <Form.Group id="usernamey">
-              <Form.Control className='w-100' value={change} style={{ maxWidth: "400px"}} name='username' type="text" onChange={e => handleChange(e.target.value)} required/>
+              <Form.Control className='w-100' placeholder='Search username' value={change} style={{ maxWidth: "400px"}} name='username' type="text" onChange={e => handleChange(e.target.value)} required/>
               <Button className='w-50' type="submit">Search</Button>
               </Form.Group>
       </Form>

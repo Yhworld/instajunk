@@ -22,7 +22,7 @@ function SignIn() {
     const handleSubmit = e => {
         e.preventDefault()
 
-    fetch("http://localhost:9292/login", {
+    fetch("https://instajunk.herokuapp.com/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

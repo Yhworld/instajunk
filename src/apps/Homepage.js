@@ -13,7 +13,7 @@ function Homepage() {
   useEffect(() => {
       const fetchData = async () => {
           try {
-              const resp = await fetch("http://localhost:9292/posts")
+              const resp = await fetch("https://instajunk.herokuapp.com/posts")
               const data = await resp.json()
           
               setpost(data)

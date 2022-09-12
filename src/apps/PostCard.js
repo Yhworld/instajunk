@@ -10,7 +10,7 @@ function PostCard({ post }) {
 
   useEffect(() => {
     if (!post) {
-      fetch(`http://localhost:9292/posts/${post.id}`)
+      fetch(`https://instajunk.herokuapp.com/posts/${post.id}`)
         .then((resp) => resp.json())
         .then((post) => setGameObj(post))
     }

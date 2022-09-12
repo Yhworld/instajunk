@@ -15,7 +15,7 @@ function App() {
 
   function handleSubmit(e) {
     e.preventDefault()
-      fetch("http://localhost:9292/users")
+      fetch("https://instajunk.herokuapp.com/users")
         .then((r) => r.json())
         .then((data) => setUser(data));
   }

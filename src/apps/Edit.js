@@ -25,7 +25,7 @@ function Edit({ show, handleUpdateUser, onClose, user}) {
     }
     function handleFormSubmit(e) {
         e.preventDefault();
-        fetch(`http://localhost:9292/users/${user.id}`, {
+        fetch(`https://instajunk.herokuapp.com/users/${user.id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",

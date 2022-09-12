@@ -31,7 +31,7 @@ function AddPost() {
             user_id: post.user_id
         }
 
-        fetch("http://localhost:9292/posts", {
+        fetch("https://instajunk.herokuapp.com/posts", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

@@ -8,7 +8,7 @@ function DeleteUpdate({ user, handleDeleteUser, handleUpdateUser }) {
     const [show,setShow]=useState(false);
 
     function handleDeleteClick() {
-        fetch(`http://localhost:9292/users/${user.id}`, {
+        fetch(`https://instajunk.herokuapp.com/users/${user.id}`, {
           method: "DELETE",
         });
         handleDeleteUser(user.id);
