@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# instajunk
+ ## By Yahya Hussein
+ 
+![Screenshot from 2022-09-13 11-05-59](https://user-images.githubusercontent.com/74947307/189846459-64619db5-3699-4fc1-8f93-2ce26a89dfc1.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Content
+ - [Description](#description)
+ - [Features](#features)
+ - [Behaviour Driven Development](#Behaviour-Driven-Development)
+ - [Requirements](#requirements)
+ - [Installation Process](#installation-Process)
+ - [Live Link](#Live-Link)
+ - [Technology  Used](#technology-Used)
+ - [Licence](#licence)
+ - [Authors Info](#Authors-Info)
+ 
+ ## Description
+ <p>This is a trial for creating an instagram clone, users can post edit there username, create new accounts and search gor new users</p>
+ 
+ ## Features
+As a user of the application,you will be able to :
+1. create new account
+2. post pictures
+3. add captions
+4. search for other users
 
-## Available Scripts
+## Behaviour Driven Development|
+| Behaviour      | Input        | Output       |
+| :------------- | :----------: | -----------: |
+| A user can create new account | A user inputs the detaiils required for the account to be formed | user can post images and also delete accounts   |
 
-In the project directory, you can run:
+###  Requirements
+ * Access to  a computer or any other device with internet service
+ * Access to internet
 
-### `npm start`
+### Installation Process
+ ****
+ * Clone to the repo : https://github.com/Yhworld/instajunk
+* Unzip the downloaded files in a folder of choice.
+* Run npm install once your in the terminal
+* Then run npm start to view the web app from a browser
+ ****
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Live Link
+- Click this link to view the live application https://instajunk-yhworld.vercel.app/
+- 
+### Technology  Used
+* React - which was used to develop the structure and functionality of the pages.
+* CSS - which was used to style the User Interface.
+* ruby sinatra - for backend which was the fetching point of the data
+* vercel - Which hosted the site
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Licence
+MIT License
 
-### `npm test`
+Copyright (c) 2022 Yahya
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-### `npm run build`
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+## Authors Info
+Slack Profile - [Yahya Ibrahim](https://app.slack.com/client/T077KKCG6/GLRQR61NW/user_profile/UKXCHMCNP?cdn_fallback=1)
